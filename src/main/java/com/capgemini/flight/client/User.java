@@ -1,5 +1,6 @@
 package com.capgemini.flight.client;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 import com.capgemini.flight.exception.InvalidBookingIDException;
@@ -31,11 +32,11 @@ public class User {
 	 */
 	public static void main(String[] args) throws InvalidBookingIDException, InvalidUserIDException, ValidateException {
 		Scanner scan = new Scanner(System.in);
-		
+
 		String userId = null;
-		
+
 		FlightManagementServiceImpl service = new FlightManagementServiceImpl();
-		
+
 		System.out.println("choose the option");
 
 		String option = null;
@@ -63,7 +64,8 @@ public class User {
 					System.out.println("Enter the booking Id :");
 					String BookingId = scan.next();
 					System.out.println(service.deleteBooking(BookingId, userId));
-				} catch (InvalidUserIDException | ValidateException | InvalidBookingIDException e2) {
+				} catch (InvalidUserIDException | ValidateException | InvalidBookingIDException
+						| NoSuchElementException e2) {
 					System.out.println(e2.getMessage());
 				}
 				break;

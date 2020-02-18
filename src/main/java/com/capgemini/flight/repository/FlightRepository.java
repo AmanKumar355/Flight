@@ -17,10 +17,10 @@ import com.capgemini.flight.entity.ScheduledFlight;
 
 public class FlightRepository {
 
-	public static List<Booking> Bookinglst1 = new ArrayList<>();
-	public static List<Booking> Bookinglst2 = new ArrayList<>();
-	public static List<Booking> Bookinglst3 = new ArrayList<>();
-	public static Map<Integer, List<Booking>> listsofBookingsMap = new HashMap<>();
+	public static List<Booking> Bookinglst1 = new ArrayList<Booking>();
+	public static List<Booking> Bookinglst2 = new ArrayList<Booking>();
+	public static List<Booking> Bookinglst3 = new ArrayList<Booking>();
+	public static Map<Integer, List<Booking>> listsofBookingsMap = new HashMap<Integer, List<Booking>>();
 	public static Map<BigInteger, Booking> allBookingsMap = new HashMap<BigInteger, Booking>();
 	static {
 

@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.capgemini.flight.test.FlightBookingViewTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! - in com.capgemini.flight.test.FlightBookingViewTest
+testUserID  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <1>
+	at com.capgemini.flight.test.FlightBookingViewTest.testUserID(FlightBookingViewTest.java:50)
+
