@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
@@ -20,8 +21,8 @@ public class FlightRepository {
 	public static List<Booking> Bookinglst1 = new ArrayList<Booking>();
 	public static List<Booking> Bookinglst2 = new ArrayList<Booking>();
 	public static List<Booking> Bookinglst3 = new ArrayList<Booking>();
-	public static Map<Integer, List<Booking>> listsofBookingsMap = new HashMap<Integer, List<Booking>>();
-	public static Map<BigInteger, Booking> allBookingsMap = new HashMap<BigInteger, Booking>();
+	public static Map<Integer, List<Booking>> listsofBookingsMap = new Hashtable<Integer, List<Booking>>();
+	public static Map<BigInteger, Booking> allBookingsMap = new Hashtable<BigInteger, Booking>();
 	static {
 
 	/***************Airport Repository********************************************************/

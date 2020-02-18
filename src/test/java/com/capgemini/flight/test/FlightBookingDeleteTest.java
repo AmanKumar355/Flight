@@ -10,23 +10,25 @@ import com.capgemini.flight.exception.InvalidBookingIDException;
 import com.capgemini.flight.exception.InvalidUserIDException;
 import com.capgemini.flight.exception.ValidateException;
 import com.capgemini.flight.service.FlightManagementServiceImpl;
+import com.capgemini.flight.service.FlightService;
 
 public class FlightBookingDeleteTest {
 
-	FlightManagementServiceImpl service = new FlightManagementServiceImpl();
+	FlightService service = new FlightManagementServiceImpl();
 
 	@Test
 	@DisplayName("Tests the booking ID format.")
 	public void testValidateException() throws ValidateException {
+		FlightManagementServiceImpl ser = new FlightManagementServiceImpl();
 		assertThrows(ValidateException.class, () -> {
-			service.validateBookingId("abc123445");
+			ser.validateBookingId("abc123445");
 		});
 		assertThrows(ValidateException.class, () -> {
-			service.validateBookingId("1234567891234");
+			ser.validateBookingId("1234567891234");
 		});
 
 		assertThrows(ValidateException.class, () -> {
-			service.validateBookingId("");
+			ser.validateBookingId("");
 		});
 
 	}
@@ -44,7 +46,7 @@ public class FlightBookingDeleteTest {
 	}
 
 	@Test
-	@DisplayName("Tests booking ID exists or not.")
+	@DisplayName("Tests booking ID or user ID exists or not.")
 	public void testvalidBookingID() throws InvalidBookingIDException {
 
 		assertThrows(InvalidBookingIDException.class, () -> {
@@ -59,20 +61,8 @@ public class FlightBookingDeleteTest {
 
 	}
 
-	@Test
-	@DisplayName("Tests user ID exists or not.")
-	public void testvalidUserID() throws InvalidBookingIDException {
 
-		assertThrows(InvalidBookingIDException.class, () -> {
 
-			service.deleteBooking("987654321", "1111");
-		});
-
-		assertThrows(InvalidUserIDException.class, () -> {
-
-			service.deleteBooking("123456789", "1234");
-		});
-
-	}
+	
 
 }

@@ -7,6 +7,7 @@ import com.capgemini.flight.exception.InvalidBookingIDException;
 import com.capgemini.flight.exception.InvalidUserIDException;
 import com.capgemini.flight.exception.ValidateException;
 import com.capgemini.flight.service.FlightManagementServiceImpl;
+import com.capgemini.flight.service.FlightService;
 
 /*************************************************************************************
  * @author Aman Kumar
@@ -35,7 +36,7 @@ public class User {
 
 		String userId = null;
 
-		FlightManagementServiceImpl service = new FlightManagementServiceImpl();
+		FlightService service = new FlightManagementServiceImpl();
 
 		System.out.println("choose the option");
 

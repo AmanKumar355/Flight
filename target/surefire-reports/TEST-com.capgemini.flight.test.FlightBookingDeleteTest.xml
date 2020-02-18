@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.065" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.109" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jre1.8.0_241\bin"/>
-    <property name="sun.java.command" value="C:\Users\Dell\AppData\Local\Temp\surefire1506826452783695546\surefirebooter2968081368390681356.jar C:\Users\Dell\AppData\Local\Temp\surefire1506826452783695546 2020-02-18T21-05-23_275-jvmRun1 surefire6010899373185142095tmp surefire_08820173218694109070tmp"/>
+    <property name="sun.java.command" value="C:\Users\Dell\AppData\Local\Temp\surefire4799482304921935159\surefirebooter1178629397515997662.jar C:\Users\Dell\AppData\Local\Temp\surefire4799482304921935159 2020-02-19T00-08-11_898-jvmRun1 surefire7405246822969749177tmp surefire_05013219455518558248tmp"/>
     <property name="surefire.test.class.path" value="E:\Capgemini\Workshops\eclipse-workspace\MavenFlight\target\test-classes;E:\Capgemini\Workshops\eclipse-workspace\MavenFlight\target\classes;C:\Users\Dell\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.5.1\junit-jupiter-api-5.5.1.jar;C:\Users\Dell\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Dell\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Dell\.m2\repository\org\junit\platform\junit-platform-commons\1.5.1\junit-platform-commons-1.5.1.jar;C:\Users\Dell\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.5.1\junit-jupiter-engine-5.5.1.jar;C:\Users\Dell\.m2\repository\org\junit\platform\junit-platform-engine\1.5.1\junit-platform-engine-1.5.1.jar;C:\Users\Dell\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.5.1\junit-jupiter-params-5.5.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Dell"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Dell\AppData\Local\Temp\surefire1506826452783695546\surefirebooter2968081368390681356.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Dell\AppData\Local\Temp\surefire4799482304921935159\surefirebooter1178629397515997662.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jre1.8.0_241\lib\resources.jar;C:\Program Files\Java\jre1.8.0_241\lib\rt.jar;C:\Program Files\Java\jre1.8.0_241\lib\sunrsasign.jar;C:\Program Files\Java\jre1.8.0_241\lib\jsse.jar;C:\Program Files\Java\jre1.8.0_241\lib\jce.jar;C:\Program Files\Java\jre1.8.0_241\lib\charsets.jar;C:\Program Files\Java\jre1.8.0_241\lib\jfr.jar;C:\Program Files\Java\jre1.8.0_241\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,8 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testvalidUserID" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.036"/>
-  <testcase name="testvalidBookingID" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0"/>
-  <testcase name="testdeleteBooking" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.003"/>
-  <testcase name="testValidateException" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.002"/>
+  <testcase name="testvalidBookingID" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0.003"/>
+  <testcase name="testdeleteBooking" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0"/>
+  <testcase name="testValidateException" classname="com.capgemini.flight.test.FlightBookingDeleteTest" time="0"/>
 </testsuite>

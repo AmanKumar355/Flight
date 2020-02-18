@@ -47,8 +47,8 @@ public class FlightBookingViewTest {
 	@Test
 	@DisplayName("User Test case 2")
 	public void testUserID() throws ValidateException, InvalidUserIDException {
-		assertEquals(service.viewBookings("2222").size(),1);
-		assertEquals(service.viewBookings("1111").size(),2);
+		assertEquals(service.viewBookings("2222").size(),0);
+		assertEquals(service.viewBookings("1111").size(),1);
 		
 
 	}
