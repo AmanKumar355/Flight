@@ -1,5 +1,6 @@
 package com.capgemini.flight.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -12,13 +13,13 @@ import com.capgemini.flight.exception.ValidateException;
 import com.capgemini.flight.service.FlightManagementServiceImpl;
 import com.capgemini.flight.service.FlightService;
 
-public class FlightBookingDeleteTest {
+public class FlightManagmentServiceTest {
 
 	FlightService service = new FlightManagementServiceImpl();
 
 	@Test
 	@DisplayName("Tests the booking ID format.")
-	public void testValidateException() throws ValidateException {
+	public void TC_FMS_Ser_01() throws ValidateException {
 		FlightManagementServiceImpl ser = new FlightManagementServiceImpl();
 		assertThrows(ValidateException.class, () -> {
 			ser.validateBookingId("abc123445");
@@ -26,43 +27,33 @@ public class FlightBookingDeleteTest {
 		assertThrows(ValidateException.class, () -> {
 			ser.validateBookingId("1234567891234");
 		});
+	}
 
-		assertThrows(ValidateException.class, () -> {
-			ser.validateBookingId("");
-		});
+	@Test
+	@DisplayName("User Test")
+	public void TC_FMS_Ser_02() throws InvalidUserIDException, ValidateException {
+
+		assertEquals(service.viewBookings("1111").size(), 2);
+		assertEquals(service.viewBookings("2222").size(), 1);
+		assertEquals(service.viewBookings("3333").size(), 1);
 
 	}
 
 	@Test
 	@DisplayName("Tests the output of 'deleteBooking' method.")
-	public void testdeleteBooking() throws ValidateException, InvalidUserIDException, InvalidBookingIDException {
-
-		assertTrue(service.deleteBooking("987654321", "2222"));
+	public void TC_FMS_Ser_03() throws ValidateException, InvalidUserIDException, InvalidBookingIDException {
 
 		assertTrue(service.deleteBooking("123456789", "1111"));
-
-		assertTrue(service.deleteBooking("212121212", "3333"));
-
 	}
 
 	@Test
-	@DisplayName("Tests booking ID or user ID exists or not.")
-	public void testvalidBookingID() throws InvalidBookingIDException {
+	@DisplayName("Tests user ID is in correct format")
+	public void TC_FMS_Ser_04() throws ValidateException {
 
-		assertThrows(InvalidBookingIDException.class, () -> {
+		assertThrows(ValidateException.class, () -> service.viewBookings("12345"));
 
-			service.deleteBooking("987654321", "1111");
-		});
-
-		assertThrows(InvalidUserIDException.class, () -> {
-
-			service.deleteBooking("123456789", "1234");
-		});
+		assertThrows(ValidateException.class, () -> service.viewBookings("abcn32"));
 
 	}
-
-
-
-	
 
 }

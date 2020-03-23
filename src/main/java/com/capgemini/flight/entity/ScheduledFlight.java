@@ -6,6 +6,10 @@ public class ScheduledFlight {
 	private Integer availableSeats;
 	private Schedule schedule;
 
+	public ScheduledFlight() {
+
+	}
+
 	public ScheduledFlight(Flight flight, Integer availableSeats, Schedule schedule) {
 		super();
 		this.flight = flight;

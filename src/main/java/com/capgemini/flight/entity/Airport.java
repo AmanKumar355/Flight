@@ -6,6 +6,10 @@ public class Airport {
 	private String airportLocation;
 	private String airportCode;
 
+	public Airport() {
+
+	}
+
 	public Airport(String airportName, String airportLocation, String airportCode) {
 		super();
 		this.airportName = airportName;

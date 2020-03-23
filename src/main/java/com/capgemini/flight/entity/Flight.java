@@ -8,6 +8,10 @@ public class Flight {
 	private String flightName;
 	private Integer seatCapacity;
 
+	public Flight() {
+
+	}
+
 	public Flight(BigInteger flightNumber, String flightName, Integer seatCapacity) {
 		super();
 		this.flightNumber = flightNumber;

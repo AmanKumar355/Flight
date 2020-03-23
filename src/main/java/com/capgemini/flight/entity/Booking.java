@@ -10,6 +10,10 @@ public class Booking {
 	private Passenger passenger;
 	private LocalDate bookingDate;
 	private ScheduledFlight scheduledFlight;
+	
+	public Booking() {
+		
+	}
 
 	public Booking(BigInteger bookingId, Integer userId, Passenger passenger, LocalDate bookingDate,
 			ScheduledFlight scheduledFlight) {

@@ -42,7 +42,7 @@ public class FlightManagementServiceImpl implements FlightService {
 	 * @throws InvalidUserIDException :if userId is not found than it is raised.
 	 ********************************************************************************* 
 	 */
-	@Override
+	
 	public List<Booking> viewBookings(String userId) throws ValidateException, InvalidUserIDException {
 		if (!validateUserId(userId))
 			throw new ValidateException("Invalid user Id");
@@ -130,7 +130,7 @@ public class FlightManagementServiceImpl implements FlightService {
 	public boolean validateBookingId(String bookingId) throws ValidateException {
 
 		if (!bookingId.matches("[1-9][0-9]{8}")) {
-			throw new ValidateException("Only digits allowed and can not start with zero.");
+			throw new ValidateException("Booking ID must contain only digits and can not start with zero.");
 		}
 
 		return true;

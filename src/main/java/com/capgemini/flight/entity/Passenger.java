@@ -8,6 +8,10 @@ public class Passenger {
 	private String passengerName;
 	private Integer passengerAge;
 
+	public Passenger() {
+
+	}
+
 	public Passenger(BigInteger pnrNumber, String passengerName, int passengerAge) {
 		super();
 		this.pnrNumber = pnrNumber;
@@ -26,8 +30,6 @@ public class Passenger {
 	public Integer getPassengerAge() {
 		return passengerAge;
 	}
-
-	
 
 	@Override
 	public String toString() {

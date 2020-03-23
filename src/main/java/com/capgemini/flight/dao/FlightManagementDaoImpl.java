@@ -3,7 +3,6 @@ package com.capgemini.flight.dao;
 import java.math.BigInteger;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import com.capgemini.flight.entity.Booking;
 import com.capgemini.flight.exception.InvalidBookingIDException;
@@ -90,6 +89,9 @@ public class FlightManagementDaoImpl implements FlightDAO {
 			throws InvalidUserIDException, InvalidBookingIDException {
 		if (!listsofBookingsMap.containsKey(userId)) {
 			throw new InvalidUserIDException("User ID is not found.");
+		}
+		else if(allBookingsMap.get(bookingId) == null) {
+			throw new InvalidBookingIDException("Booking ID not found.");
 		}
 
 		else if (allBookingsMap.get(bookingId).getUserId() != userId) {

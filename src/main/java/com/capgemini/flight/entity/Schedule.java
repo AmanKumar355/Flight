@@ -9,6 +9,10 @@ public class Schedule {
 	private LocalDateTime arrivalTime;
 	private LocalDateTime departureTime;
 
+	public Schedule() {
+
+	}
+
 	public Schedule(Airport sourceAirport, Airport destinationAirport, LocalDateTime arrivalTime,
 			LocalDateTime departureTime) {
 		super();
