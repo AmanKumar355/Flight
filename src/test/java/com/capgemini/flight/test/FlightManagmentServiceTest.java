@@ -33,7 +33,7 @@ public class FlightManagmentServiceTest {
 	@DisplayName("User Test")
 	public void TC_FMS_Ser_02() throws InvalidUserIDException, ValidateException {
 
-		assertEquals(service.viewBookings("1111").size(), 2);
+		assertEquals(service.viewBookings("1111").size(), 1);
 		assertEquals(service.viewBookings("2222").size(), 1);
 		assertEquals(service.viewBookings("3333").size(), 1);
 
@@ -43,7 +43,7 @@ public class FlightManagmentServiceTest {
 	@DisplayName("Tests the output of 'deleteBooking' method.")
 	public void TC_FMS_Ser_03() throws ValidateException, InvalidUserIDException, InvalidBookingIDException {
 
-		assertTrue(service.deleteBooking("123456789", "1111"));
+		assertTrue(service.deleteBooking("987654321", "2222"));
 	}
 
 	@Test
